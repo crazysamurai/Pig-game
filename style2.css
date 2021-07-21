@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #8aff8a;
+}
+
+.buttons{
+    width:100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.buttons button{
+    padding:10px;
+    margin: 10px;
+    border-radius: 50px;
+    border-style:solid;
+}
+.hidden{
+    display: none;
+}
