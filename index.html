@@ -8,7 +8,27 @@
     <title>Pig Game</title>
   </head>
   <body>
+    <div class="modal" id="modal">
+      <div class="modal-header">
+        🆘
+        <button class="close-button">&times;</button>
+      </div>
+      <div class="modal-body">
+        <ul>
+          <li>🎲 lets the player to roll the dice.</li>
+          <li>🔄 lets you reset the game and play again.</li>
+          <li>📥 upon clicking this button the current score of the player will be added to the total score and the player will be switched.</li>
+          <li>"Current" represents the score of the player in a single turn. This will reset to 0 when the player is switched.</li>
+          <li>On rolling the dice, the number on the face of the dice will be added to the current score of the player.</li>
+          <li>If a player rolls <span><img class="" src="dice-1.png" alt=""></span> then the player will lose all of his CURRENT points and the players will be switched. The total score of the player will not be affected.</li>
+          <li>First player to reach 💯 wins the game.</li>
+          <li>Have fun!</li>
+        </ul>
+      </div>
+    </div> 
+
     <main>
+
       <section class="player player--0 player--active">
         <h2 class="name" id="name--0">Player 1</h2>
         <p class="score" id="score--0">43</p>
@@ -17,6 +37,7 @@
           <p class="current-score" id="current--0">0</p>
         </div>
       </section>
+
       <section class="player player--1">
         <h2 class="name" id="name--1">Player 2</h2>
         <p class="score" id="score--1">24</p>
@@ -30,7 +51,11 @@
       <button class="btn btn--new">🔄 New game</button>
       <button class="btn btn--roll">🎲 Roll dice</button>
       <button class="btn btn--hold">📥 Hold</button>
+      <button class="btn help-button">&#63</button> 
+
     </main>
+
+    <div id="overlay"></div>
     <script src="script.js"></script>
   </body>
 </html>

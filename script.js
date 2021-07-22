@@ -90,3 +90,23 @@ holdBtn.addEventListener('click', function () {
 
 //reset game
 btnNew.addEventListener('click', init);
+
+//modal
+const openModalButton = document.querySelector('.help-button')
+const closeModalButton = document.querySelector('.close-button')
+const overlay = document.querySelector("#overlay")
+
+const openModal = ()=>{
+  if(modal==null) return
+  modal.classList.add('active')
+  overlay.classList.add('active')
+}
+const closeModal = ()=>{
+  if(modal==null) return
+  modal.classList.remove('active')
+  overlay.classList.remove('active')
+}
+
+openModalButton.addEventListener("click",openModal);
+closeModalButton.addEventListener("click",closeModal);
+overlay.addEventListener('click',closeModal)
